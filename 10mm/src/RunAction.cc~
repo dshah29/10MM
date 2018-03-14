@@ -1,0 +1,43 @@
+
+
+#include "RunAction.hh"
+
+#include <stdlib.h>
+#include "G4Run.hh"
+#include "G4RunManager.hh"
+#include "G4UnitsTable.hh"
+
+
+RunAction::RunAction()
+{}
+
+
+RunAction::~RunAction()
+{}
+
+
+
+void RunAction::BeginOfRunAction(const G4Run*)
+{ 
+  G4RunManager::GetRunManager()->SetRandomNumberStore(true);
+  sumEAbs = 0;
+  energy_count=(int *)calloc(201,sizeof(int));
+}
+void RunAction::fillPerEvent(G4double EAbs)
+{
+  sumEAbs += EAbs;
+}
+void RunAction::EndOfRunAction(const G4Run*)
+{
+  G4int m;
+  
+  std::ofstream particlecount;
+  particlecount.open("particlecount.xls");
+  for (m = 1; m <= 200; m++)
+  {
+		  particlecount<< m << "\t" <<energy_count[m]<<G4endl;
+	
+  }
+
+  free(energy_count);
+}

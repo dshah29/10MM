@@ -1,0 +1,92 @@
+
+/gps/source/intensity 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre -29.6 0 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0.
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+
+/gps/source/add 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre -1.7 16.1 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0.
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+
+
+/gps/source/add 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre 7.6 0 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0.
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+
+
+
+
+/gps/source/add 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre -1.7 -16.1 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0.
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+
+
+
+
+/gps/source/add 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre -20.3 16.1 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0. 
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+
+
+
+
+/gps/source/add 4.
+/gps/particle gamma
+/gps/pos/type Surface 
+/gps/pos/shape Cylinder	
+/gps/pos/centre -20.3 -16.1 39.5 mm
+/gps/pos/radius 2 mm
+/gps/pos/halfz 0.2 mm
+/gps/ang/type beam1d
+/gps/ang/rot1 0. 1. 0.
+/gps/ang/rot2 1. 0. 0.
+/gps/ang/sigma_r 40. deg
+/gps/energy 6.4 keV
+/random/setSeeds 8 8
+#distance between silica and moon is 10mm
+#100 millions counts
+/run/beamOn 100000

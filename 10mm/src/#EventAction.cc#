@@ -1,0 +1,32 @@
+
+
+#include "EventAction.hh"
+
+#include "RunAction.hh"
+
+#include "G4Event.hh"
+#include "G4UnitsTable.hh"
+
+#include "Randomize.hh"
+#include <iomanip>
+EventAction::EventAction(RunAction*)
+:runAct(run)
+{
+}
+
+EventAction::~EventAction()
+{
+}
+
+void EventAction::BeginOfEventAction(const G4Event* evt)
+{
+ EnergyAbs = 0;
+ AddEnergy = 0;
+}
+
+void EventAction::EndOfEventAction(const G4Event* evt)
+{
+  runAct->fillPerEvent(EnergyAbs);
+  runAct->fillenergycount(AddEnergy);
+	  
+}  

@@ -1,0 +1,38 @@
+
+
+#ifndef RunAction_h
+#define RunAction_h 1
+
+#include "G4UserRunAction.hh"
+#include "globals.hh"
+#include <iostream>
+#include "G4ios.hh"
+#include <stdlib.h>
+#include <iomanip>
+#include <sstream>
+#include <fstream> 
+#include <istream>
+#include <ostream>
+
+
+class G4Run;
+
+class RunAction : public G4UserRunAction
+{
+public:
+  RunAction();
+  virtual ~RunAction();
+  
+  void BeginOfRunAction(const G4Run*);
+  void EndOfRunAction(const G4Run*);
+    
+  void fillPerEvent(G4double);
+  void fillenergycount(G4double edep) {if ((int (edep/100)) <= 200 & edep > 0) energy_count [int((edep/100)+1) ]++; };
+private:
+  G4double sumEAbs;
+  G4int* energy_count;   
+};
+
+
+#endif
+
